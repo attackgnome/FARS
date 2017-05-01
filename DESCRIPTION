@@ -2,8 +2,13 @@ Package: fars
 Title: Fatality Analysis Reporting System
 Version: 0.0.0.9000
 Authors@R: person("attackgnome", email = "123456@gmail.com", role = c("aut", "cre"))
-Description: Package for the analysis of data from the Fatality Analysis Reporting System (FARS)
+Description: This package is for the analysis of data from the Fatality Analysis Reporting System (FARS).
+             It contains function to read, summarize and plot data from the NHTSA.
              https: //www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars
+             system.file("extdata", "accident_2013.csv.bz2", package = "fars")
+             system.file("extdata", "accident_2014.csv.bz2", package = "fars")
+             system.file("extdata", "accident_2015.csv.bz2", package = "fars")
+             
 Depends: R (>= 3.3.1)
 License: GPL-2
 Encoding: UTF-8
