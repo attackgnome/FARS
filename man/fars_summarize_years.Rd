@@ -13,12 +13,14 @@ fars_summarize_years(years)
 A data.frame containing the number of accidents with years as columns and months as rows
 }
 \description{
-\code{fars_read_years} returns a data.frame containing the number of accidents with years as columns and months as rows
+\code{fars_summarize_years} returns a data.frame containing the number of accidents with years as columns and months as rows
 }
 \note{
 requires dplyr package
 }
 \examples{
+\donttest{
 fars_summarize_years(c(2013,2014))
 fars_summarize_years(2014:2015)
+}
 }
