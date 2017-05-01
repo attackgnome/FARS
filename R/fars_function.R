@@ -97,8 +97,13 @@ fars_summarize_years <- function(years) {
 #'  be returned "no accidents to plot"
 #'
 #'@examples
-#'fars_map_state('10',2013)
+#'fars_map_state('5',2013)
 #'fars_map_state('01',2015)
+#'
+#'@importFrom dplyr filter
+#'@importFrom maps map
+#'@importFrom graphics points
+#'
 fars_map_state <- function(state.num, year) {
   filename <- make_filename(year)
   data <- fars_read(filename)
