@@ -27,8 +27,6 @@ If the data for the year is available and the state.num is valid
 requires maps and graphics packages
 }
 \examples{
-fars_map_state(5,2013)
-fars_map_state(1,2015)
-
+\donttest{fars_map_state(1,2015)}
 
 }

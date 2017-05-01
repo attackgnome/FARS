@@ -12,4 +12,4 @@ RoxygenNote: 6.0.1
 Suggests: knitr,
     rmarkdown, testthat
 VignetteBuilder: knitr
-Imports: maps, graphics, dplyr, readr, magrittr, tidyr
+Imports: maps, graphics, dplyr, readr, magrittr, tidyr, lattice, Matrix, nlme

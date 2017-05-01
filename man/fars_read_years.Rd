@@ -19,6 +19,8 @@ a data.frame with with the month and year as columns
 requires dplyr package
 }
 \examples{
-fars_read(2014)
-#'fars_read(2014:2015)
+\donttest{
+fars_read_years(2014)
+fars_read_years(2014:2015)
+}
 }

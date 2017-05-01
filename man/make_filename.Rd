@@ -19,5 +19,7 @@ sprintf A string
 year must be compatible with as.integer
 }
 \examples{
+\donttest{
 fars_read(2014)
+}
 }

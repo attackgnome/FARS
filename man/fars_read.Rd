@@ -21,7 +21,7 @@ requires readr and dplyr packages
 If the files does not exist will return an error message "file '", filename, "' does not exist"
 }
 \examples{
-fars_read("accident.2014.csv.bz2")
-fars_read("xyz.csv")
-
+\donttest{
+fars_read("accident_2014.csv.bz2")
+}
 }

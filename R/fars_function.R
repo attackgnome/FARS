@@ -8,9 +8,9 @@
 #'@param filename A string.
 #'@return data A data frame tbl
 #'@examples
-#'fars_read("accident.2014.csv.bz2")
-#'fars_read("xyz.csv")
-#'
+#'\donttest{
+#'fars_read("accident_2014.csv.bz2")
+#'}
 fars_read <- function(filename) {
   if(!file.exists(filename))
     stop("file '", filename, "' does not exist")
@@ -29,7 +29,9 @@ fars_read <- function(filename) {
 #'@param year A numeric.
 #'@return sprintf A string
 #'@examples
+#'\donttest{
 #'fars_read(2014)
+#'}
 make_filename <- function(year) {
   year <- as.integer(year)
   sprintf("accident_%d.csv.bz2", year)
@@ -44,8 +46,10 @@ make_filename <- function(year) {
 #'@param years A vector of numbers representing years
 #'@return a data.frame with with the month and year as columns
 #'@examples
-#'fars_read(2014)
-#'#'fars_read(2014:2015)
+#'\donttest{
+#'fars_read_years(2014)
+#'fars_read_years(2014:2015)
+#'}
 fars_read_years <- function(years) {
   lapply(years, function(year) {
     file <- make_filename(year)
@@ -63,15 +67,17 @@ fars_read_years <- function(years) {
 
 #'FARS summarize by year and month
 #'
-#'\code{fars_read_years} returns a data.frame containing the number of accidents with years as columns and months as rows
+#'\code{fars_summarize_years} returns a data.frame containing the number of accidents with years as columns and months as rows
 #'
 #'@note requires dplyr package
 #'
 #'@param years A vector of numbers representing years
 #'@return A data.frame containing the number of accidents with years as columns and months as rows
 #'@examples
+#'\donttest{
 #'fars_summarize_years(c(2013,2014))
 #'fars_summarize_years(2014:2015)
+#'}
 fars_summarize_years <- function(years) {
   dat_list <- fars_read_years(years)
   dplyr::bind_rows(dat_list) %>%
@@ -98,9 +104,7 @@ fars_summarize_years <- function(years) {
 #'  be returned "no accidents to plot"
 #'
 #'@examples
-#'fars_map_state(5,2013)
-#'fars_map_state(1,2015)
-#'
+#'\donttest{fars_map_state(1,2015)}
 #'
 fars_map_state <- function(state.num, year) {
   filename <- make_filename(year)
