@@ -10,6 +10,7 @@
 #'@examples
 #'fars_read("accident.2014.csv.bz2")
 #'fars_read("xyz.csv")
+#'
 fars_read <- function(filename) {
   if(!file.exists(filename))
     stop("file '", filename, "' does not exist")
@@ -97,12 +98,9 @@ fars_summarize_years <- function(years) {
 #'  be returned "no accidents to plot"
 #'
 #'@examples
-#'fars_map_state('5',2013)
-#'fars_map_state('01',2015)
+#'fars_map_state(5,2013)
+#'fars_map_state(1,2015)
 #'
-#'@importFrom dplyr filter
-#'@importFrom maps map
-#'@importFrom graphics points
 #'
 fars_map_state <- function(state.num, year) {
   filename <- make_filename(year)

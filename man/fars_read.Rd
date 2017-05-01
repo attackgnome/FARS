@@ -23,4 +23,5 @@ If the files does not exist will return an error message "file '", filename, "' 
 \examples{
 fars_read("accident.2014.csv.bz2")
 fars_read("xyz.csv")
+
 }
