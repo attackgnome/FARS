@@ -1,6 +1,6 @@
 ---
-title: "fars"
-author: "Joseph Romani"
+title: "Vignette Title"
+author: "Vignette Author"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
@@ -8,6 +8,10 @@ vignette: >
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
 
 This package contains functions to read, summarize, and plot the data available from the NHTSA Fatality Analysis reporting system. For more information on the underlying data, see <https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars>.
 
